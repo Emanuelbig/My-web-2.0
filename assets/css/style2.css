@@ -3,12 +3,16 @@ html {
 }
 /* Main */
 .presentation{
-    padding-top: 5rem;
-    background-color: #F6F9FF;
+    padding-top: 10rem;
+    /*background-color: #F6F9FF;*/
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
+    align-items: center;
     gap: 1.25rem;
     overflow: hidden;
+    justify-content: center;
+    /* height: 100vh; */
+    text-align: center;
 }
 
 .open{
@@ -26,11 +30,16 @@ html {
 }
 .important__text{
     box-sizing: border-box;
-    width: 100%;
-
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .main__title{
-    position: relative;
+    justify-content: center;
+    align-content: center;
+    /* position: relative; */
     
 }
 
@@ -41,20 +50,25 @@ html {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-bottom: 7.5rem;
+    margin-bottom: 2rem;
+    /*margin-bottom: 7.5rem;*/
     margin-top: 6.25rem;
-    margin-right: 4rem;
+    /* margin-right: 60px; */
+    /* margin-right: 4rem; */
+    text-align: left;
 }
 
 .presentation_text2{
     /* width: 44rem; */
     color: #000;
-    font-family: Mulish;
+    font-family: SF Pro Display;
     font-size: 2.250em;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    margin-right: 60px;
+    /* margin-right: 60px; */
+    text-align: left;
+    margin-bottom: 2rem;
 }
 
 .highlighted{
@@ -111,7 +125,7 @@ html {
 .projects_frame{
     position: relative;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
-
+    
 }
 
 .image__frame{
@@ -139,6 +153,7 @@ html {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 33px;
+    border: 2px solid #0056FF
     
 }
 
@@ -195,7 +210,7 @@ html {
     flex-flow: column wrap;
     /* justify-content: center; */
     /* align-items: center; */
-    background: linear-gradient(125deg, #F3F7FF 0%, #EAF1FF 50.56%, #D6E3FF 76.84%, #CADCFF 100%);
+    /*background: linear-gradient(125deg, #F3F7FF 0%, #EAF1FF 50.56%, #D6E3FF 76.84%, #CADCFF 100%);*/
     width: 100%;
 }
 
@@ -788,7 +803,7 @@ textarea{
     }
     .filter_image::before{
         border-radius: 15px;
-        
+        border: 2px solid #0056FF
     }
 
     .button__portfolio{
@@ -1008,6 +1023,7 @@ textarea{
         display: flex;
         justify-content: center;
         padding-bottom: 3.5rem;
+        align-content: center;
     }
     /* .important__text{
         display: flex;
