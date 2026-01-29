@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseñador de Productos | Emanuel Morano Solé</title>
@@ -11,25 +12,26 @@
     <link rel="icon" href="./assets/images/favicon 32x32.ico" sizes="32x32" type="image/x-icon">
 
     <!-- Metaetiquetas de posicionamiento -->
-    <meta name="description" content="Emanuel Morano Solé es un Diseñador de Productos con una trayectoria extensa y exquisita gestionando desarrollo de productos">
+    <meta name="description" content="Emanuel Morano Solé es un Diseñador de Productos con una trayectoria en el desarrollo y gestión de producto, proyectos de diseño integral y mejora continua(iteración).">
     <meta property="og:title" content="Emanuel Morano Solé - Diseñador de Productos">
     <meta property="og:description" content="Emanuel Morano Solé es un Diseñador de Productos con una trayectoria extensa y exquisita gestionando desarrollo de productos">
     <meta property="og:type" content="Pagina Web">
-    <meta property="og:image" content="https://www.emanuelmoranosole.com/assets/images/product-designer.png">
+    <meta property="og:image" content="https://www.emanuelmoranosole.com/assets/images/Emanuel Morano Sole_signature-02-01.png">
     <meta property="og:url" content="https://www.emanuelmoranosole.com/index.html">
-    <meta name="twitter:card" content="Diseño de productos - UX - UI - Industrial"> 
+    <meta name="twitter:card" content="Diseño de productos - Innovacion en Diseño Digital e Industrial"> 
     <meta name="twitter:site" content="@emanuelmoranosole">
     <link rel="canonical" href="http://www.emanuelmoranosole.com">
-    <meta name="keywords" content="Diseño, UX, UI, Diseño Industrial, Diseñador de Productos"/>
+    <meta name="keywords" content="Innovación, UX, UI, Diseño Industrial, Diseñador de Productos"/>
     <meta name="author" content="Emanuel Morano Solé - Diseñador" />
     <meta name="copyright" content="Emanuel Morano Solé"/>
     <meta name="robots" content="index,follow">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./assets/css/style1.css">
-    <link rel="stylesheet" href="./assets/css/style2.css">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/pruebapalabras.css">
+    <!--<link rel="stylesheet" href="./assets/css/style1.css">
+        <link rel="stylesheet" href="./assets/css/style2.css">
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="./assets/css/pruebapalabras.css"> 
+    -->
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- remember use this https://animejs.com/ -->
@@ -41,219 +43,329 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <!-- Font Open Sans -->
+    <!-- Font Mulish -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,800;1,300;1,700;1,800&display=swap" rel="stylesheet">
     <!-- Google adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9477204477462129"
     crossorigin="anonymous"></script>
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --bg-color: #ffffff;
+            --text-primary: #0a0a0a;
+            --text-secondary: #888888;
+            --accent-color: #0056ff;
+            --cursor-x: 50%;
+            --cursor-y: 50%;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body, html {
+            width: 100%;
+            /* min-height para asegurar que cubra toda la pantalla, pero permita crecer */
+            min-height: 100vh;
+            /* Soporte para móviles modernos (dvh ignora la barra de url) */
+            min-height: 100dvh; 
+            
+            background-color: var(--bg-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-primary);
+            
+            /* Centrado flex */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* Importante: permite scroll si el contenido es alto en móvil */
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* --- INTERACTIVE BACKGROUND --- */
+        .background-glow {
+            position: fixed; /* Fixed para que no se mueva al scrollear */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(
+                circle at var(--cursor-x) var(--cursor-y), 
+                rgba(212, 255, 0, 0.08) 0%, 
+                rgba(10, 10, 10, 1) 60%
+            );
+            transition: background 0.1s ease;
+            pointer-events: none;
+        }
+
+        /* --- LAYOUT --- */
+        .container {
+            padding: 2rem;
+            max-width: 900px;
+            width: 100%;
+            z-index: 1;
+            position: relative;
+        }
+
+        header {
+            margin-bottom: clamp(3rem, 10vh, 5rem);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Permite que baje si falta espacio */
+            gap: 1.5rem;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* --- LANGUAGE TOGGLE --- */
+        .lang-switch {
+            background: none;
+            border: 1px solid var(--text-secondary);
+            color: var(--text-secondary);
+            padding: 0.4rem 0.8rem; /* Touch target un poco más grande */
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s ease;
+        }
+
+        .lang-switch:hover, .lang-switch:active {
+            border-color: #0056ff;
+            color:#0056ff;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        .status-indicator {
+            width: 8px;
+            height: 8px;
+            background-color: #0056ff; /* Azul brillante */
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-color);
+            animation: pulse 2s infinite;
+            flex-shrink: 0; /* Evita que se aplaste */
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; scale: 1; }
+            50% { opacity: 0.5; scale: 0.9; }
+            100% { opacity: 1; scale: 1; }
+        }
+
+        .my-identity {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        h1 {
+            /* Clamp ajustado para móviles: min 2.5rem */
+            font-size: clamp(2.5rem, 9vw, 6rem);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #232323, #aaa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            word-break: break-word; /* Evita desborde horizontal */
+        }
+
+        p.subtext {
+            font-size: clamp(1rem, 4vw, 1.4rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: clamp(3rem, 10vh, 5rem);
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* --- LINKS --- */
+        .links-container {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-link {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: #0056ff ;
+            transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .cta-link:hover { color: #0056ff; }
+        .cta-link:hover::before { width: 100%; }
+        
+        .arrow-icon { transition: transform 0.3s ease; }
+        .cta-link:hover .arrow-icon { transform: translateX(5px); }
+
+        /* --- MOBILE MEDIA QUERY --- */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem; /* Menos padding lateral */
+            }
+
+            header {
+                margin-bottom: 3rem;
+            }
+            
+            h1 {
+                margin-bottom: 1rem;
+            }
+
+            .links-container {
+                flex-direction: column; /* Links uno debajo del otro */
+                gap: 1.5rem;
+                align-items: flex-start;
+            }
+
+            .cta-link {
+                padding: 0.8rem 0; /* Área de toque más grande verticalmente */
+                width: 100%; /* Ocupa todo el ancho para facilitar el tap */
+                border-bottom: 1px solid rgba(255,255,255,0.1); /* Separador sutil */
+            }
+            
+            .cta-link::before {
+                display: none; /* Quitamos la línea animada en móvil, usamos borde */
+            }
+            
+            .cta-link:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Preloader -->
-    <!-- <div id="pantalla-carga">       
-        <h1>El diseño es una forma de hacer la vida mejor, y yo te ayudo a lograrlo.</h1>
-        <div class="spinner"></div>  
-        <div id="overlay"></div>        
-    </div> -->
-    <!-- Navbar -->
-    <nav class="navbar glassmorphism" id="contenido">
-        <div class="logo typo__ema "><a class="alink" href="https://www.emanuelmoranosole.com/index.html">Emanuel Morano Solé, Diseñador de Productos</a></div>
-        <div class="e__logo e__appears "><a class="alink" href="https://www.emanuelmoranosole.com/index.html">E.</a></div>
-        <ul class="nav-links typo__links">
-            <li class="effect__li"><a  href="./assets/pages/sobremi.html">Sobre mí</a></li>
-            <li class="effect__li"><a href="./assets/pages/proyectos.html">Proyectos</a></li>
-            <li class="effect__li"><a href="./assets/pages/contacto.html">Contacto</a></li>
-            <div class="square__laguages"><li><a href="#">EN</a></li></div>            
-        </ul>
-        <div class="menu-toggle">
-            <div class="bar effect__bars"></div>
-            <div class="bar effect__bars"></div>
-            <div class="bar3 effect__bars"></div>
-        </div>
-    </nav>
-    <!-- Main -->
-    <main class="presentation" id="contenido">
-        <div class="open" data-aos="fade-left" data-aos-duration="700">
-            <div class="important__text1b">
-                <div class="main__title">
-                    <p class="presentation_text1">Diseño experiencias 
-                        y productos emocionantes</p>
-                </div>
-            </div>
-        </div>
-        <div class="me" data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="700"
-        data-aos-offset="0">
-            <img src="./assets/images/meversion1a.webp" class="me2" alt="Emanuel Morano Solé - Diseñador">
-        </div>
-        <div class="important__text">
-            <div class="main__title" data-aos="fade-right" data-aos-duration="700">
-                <h1 class="presentation_text1 close__responsive">Diseño experiencias 
-                    y productos emocionantes</h1>
-            </div>
-            <div class="main__text" data-aos="fade-right" data-aos-duration="700">
-                <h2 class="presentation_text2">Hola! Soy Ema, un <span class="highlighted">Diseñador</span> que combina la creatividad con la tecnología.
-                    Me centro en crear soluciones que evoquen <span class="highlighted">conexiones emocionales</span>, <span class="highlighted">impactos económicos positivos</span> y <span class="highlighted">satisfacciónes en el usuario</span>.</h2>
-            </div> 
-        </div>       
-    </main>
-    <!-- Proyectos -->
-    <section class="projects">
-        <div class="container__title__sections" data-aos="fade-right" data-aos-duration="700">
-            <div class="circle__titles"></div>
-            <h3 class="projects__title">PROYECTOS</h3>
-        </div>        
-        <div class="container__projects">
-            <!-- <div class="projects_frame">
-                <div class="filter_image">
-                    <img src="./assets/images/Portada-industrial-design.png" alt="Diseño Industrial" class="image__frame">
-                </div>
-                <p class="title__frame">Diseño Industrial</p>
-                <div class="button__portfolio"><a href=""><svg width="39" height="27" viewBox="0 0 52 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M52 17.9996C51.9843 17.3854 51.7993 17.0152 51.5625 16.7496L38.5625 0.749519C37.9484 -0.116231 36.5569 -0.253235 35.6869 0.449775C34.8169 1.15279 34.7707 2.46726 35.4687 3.24952L45.8125 15.9996H2C0.8954 15.9996 0 16.895 0 17.9996C0 19.1042 0.8954 19.9996 2 19.9996H45.8125L35.4687 32.7496C34.677 33.5396 34.902 34.9255 35.7377 35.6689C36.3811 36.2411 38.0957 36.0588 38.5625 35.2496L51.5625 19.2496C51.901 18.8352 52.0041 18.527 52 17.9996Z" fill="white"/>
-                    </svg></a>
-                </div>
-            </div> -->
-            <div class="projects_frame" data-aos="fade-right" data-aos-duration="700">
-                <div class="filter_image">
-                    <img src="./assets/images/Portada-uxui-design.png" alt="Diseño UX UI trabajos - Emanuel Morano Solé" class="image__frame">
-                </div>
-                <h3 class="title__frame">Diseño UX/UI</h3>
-                <div class="button__portfolio"><a href="./assets/pages/uxuidesign.html"><svg width="39" height="27" viewBox="0 0 52 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M52 17.9996C51.9843 17.3854 51.7993 17.0152 51.5625 16.7496L38.5625 0.749519C37.9484 -0.116231 36.5569 -0.253235 35.6869 0.449775C34.8169 1.15279 34.7707 2.46726 35.4687 3.24952L45.8125 15.9996H2C0.8954 15.9996 0 16.895 0 17.9996C0 19.1042 0.8954 19.9996 2 19.9996H45.8125L35.4687 32.7496C34.677 33.5396 34.902 34.9255 35.7377 35.6689C36.3811 36.2411 38.0957 36.0588 38.5625 35.2496L51.5625 19.2496C51.901 18.8352 52.0041 18.527 52 17.9996Z" fill="white"/>
-                    </svg></a>
-                </div>
-            </div>
-            <div class="projects_frame" data-aos="fade-right" data-aos-duration="700">
-                <div class="filter_image">
-                    <img src="./assets/images/Portada-industrial-design.png" alt="Diseño Industrial trabajos - Emanuel Morano Solé" class="image__frame">
-                </div>
-                <h3 class="title__frame">Diseño Industrial</h3>
-                <div class="button__portfolio"><a href="./assets/pages/industrialdesign.html"><svg width="39" height="27" viewBox="0 0 52 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M52 17.9996C51.9843 17.3854 51.7993 17.0152 51.5625 16.7496L38.5625 0.749519C37.9484 -0.116231 36.5569 -0.253235 35.6869 0.449775C34.8169 1.15279 34.7707 2.46726 35.4687 3.24952L45.8125 15.9996H2C0.8954 15.9996 0 16.895 0 17.9996C0 19.1042 0.8954 19.9996 2 19.9996H45.8125L35.4687 32.7496C34.677 33.5396 34.902 34.9255 35.7377 35.6689C36.3811 36.2411 38.0957 36.0588 38.5625 35.2496L51.5625 19.2496C51.901 18.8352 52.0041 18.527 52 17.9996Z" fill="white"/>
-                    </svg></a>
-                </div>
-            </div>
-        </div>
-    </section>
-        <!-- Design Methods -->
-        <section class="design__methods">
-            <div class="animation__container">
-                    <div class="animation__down">
-                        <p class="text text__outline"><span>Design Thinking</span><span>•</span></p>
-                        <p class="text text__outline passion"><span>Passion</span><span>•</span></p>
-                        <p class="text text__outline"><span>Human-centred design</span><span>•</span></p>
-                    </div>
-                    <div class="animation__top">
-                        <p class="text text__outline"><span>Design Sprint</span><span>•</span></p>
-                        <p class="text text__outline"><span>Project Management</span><span>•</span></p>
-                        <p class="text text__outline"><span>Development</span><span>•</span></p> 
-                    </div>
-            </div>
-        </section>
-    <!-- About me and Forms -->
-    <section class="aboutme__forms">
-        <article class="aboutme">
-            <div class="container__title__sections" data-aos="fade-right" data-aos-duration="700">
-                <div class="circle__titles"></div>
-                <h2 class="projects__title">SOBRE MÍ</h2>
-            </div>
-            <div class="text__aboutme" data-aos="fade-right" data-aos-duration="700">
-                <p>Soy un Diseñador muy curioso nacido en la ciudad de Buenos Aires, Argentina. Desde chico me apasiona crear experiencias, situaciones y objetos por lo tanto tuve una formación técnica en mi adolescencia para luego seguir con mi formación en la Universidad de Buenos Aires como Diseñador Industrial, en el camino descubrí que el diseño puede estar presente practicamente en todo, como por ejemplo servicios y productos tangibles e intangibles. Esta concepción que tengo sobre el diseño ha hecho que esté involucrado en proyectos diferentes entre sí con distintas complejidades y escabilidades.</p>
-                <p>Me apasiona crear soluciones, materializar ideas y que los proyectos a mi cargo terminen desencadenando buenas experiencias y beneficios para todos, lo veo como mi granito de arena para mejorar la sociedad en la que vivimos.</p>
-                <p>Soy un Diseñador que tiene empatia y capacidad analítica para descubrir las necesidades e intereses y en base a eso crear soluciones viables y funcionales.</p>
-            </div>
-            <div class="button__aboutme" data-aos="zoom-in" data-aos-duration="700"><a href="./assets/pages/sobremi.html#mypath">Más info</a></div>
-        </article>
-        <article class="forms">
-            <div class="container__title__sections" data-aos="fade-right" data-aos-duration="700">
-                <div class="circle__titles"></div>
-                <h4 class="projects__title">MIS FORMAS</h4>
-            </div>
-            <div class="container__cards">
-                <div class="card__forms" data-aos="fade-right" data-aos-duration="700" data-aos-offset="200">
-                    <svg class="icon__card" xmlns="http://www.w3.org/2000/svg" width="auto" height="70" viewBox="0 0 87 92" fill="none">
-                        <mask id="path-1-outside-1_198_121" maskUnits="userSpaceOnUse" x="0" y="0" width="87" height="92" fill="black">
-                        <rect fill="white" width="87" height="92"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M43.1341 11.5018C43.2297 11.5974 43.3056 11.711 43.3574 11.836C43.4092 11.961 43.4358 12.095 43.4358 12.2303C43.4358 12.3656 43.4092 12.4995 43.3574 12.6245C43.3056 12.7495 43.2297 12.8631 43.1341 12.9588C43.0384 13.0544 42.9248 13.1303 42.7998 13.1821C42.6748 13.2339 42.5409 13.2605 42.4056 13.2605C42.2703 13.2605 42.1363 13.2339 42.0113 13.1821C41.8863 13.1303 41.7727 13.0544 41.6771 12.9588L36.5771 7.85875C36.4812 7.76317 36.4052 7.64962 36.3534 7.52462C36.3015 7.39961 36.2748 7.2656 36.2748 7.13025C36.2748 6.99491 36.3015 6.8609 36.3534 6.73589C36.4052 6.61089 36.4812 6.49734 36.5771 6.40175L41.6771 1.30175C41.7727 1.20609 41.8863 1.1302 42.0113 1.07842C42.1363 1.02665 42.2703 1 42.4056 1C42.5409 1 42.6748 1.02665 42.7998 1.07842C42.9248 1.1302 43.0384 1.20609 43.1341 1.30175C43.2297 1.39742 43.3056 1.511 43.3574 1.63599C43.4092 1.76099 43.4358 1.89496 43.4358 2.03025C43.4358 2.16555 43.4092 2.29952 43.3574 2.42452C43.3056 2.54951 43.2297 2.66309 43.1341 2.75875L40.0791 5.81875C40.3161 5.79875 40.5531 5.78175 40.7901 5.76575C41.7581 5.69909 42.7167 5.66575 43.6661 5.66575C49.2696 5.66562 54.8183 6.76927 59.9953 8.91368C65.1722 11.0581 69.8761 14.2013 73.8382 18.1637C77.8004 22.1261 80.9432 26.8302 83.0873 32.0073C85.2313 37.1845 86.3346 42.7332 86.3341 48.3368C86.3341 48.9461 86.3184 49.5971 86.2871 50.2898C86.2584 50.9318 86.2141 51.5811 86.1541 52.2378C86.1232 52.5039 85.9896 52.7474 85.7817 52.9164C85.5739 53.0854 85.3082 53.1665 85.0414 53.1424C84.7745 53.1182 84.5277 52.9908 84.3535 52.7872C84.1794 52.5837 84.0916 52.3201 84.1091 52.0528C84.1644 51.4528 84.2061 50.8354 84.2341 50.2008C84.2601 49.6281 84.2731 49.0068 84.2731 48.3368C84.2733 43.0041 83.2232 37.7236 81.1826 32.7968C79.142 27.87 76.1509 23.3934 72.3801 19.6227C68.6094 15.8519 64.1328 12.8608 59.206 10.8202C54.2792 8.77964 48.9987 7.72949 43.6661 7.72975C42.7281 7.72975 41.8151 7.75942 40.9271 7.81875C40.4677 7.84875 40.0141 7.88642 39.5661 7.93175L43.1341 11.4988V11.5018ZM11.5991 66.5838C11.632 66.4512 11.6911 66.3265 11.7728 66.217C11.8544 66.1074 11.9571 66.0153 12.0748 65.9459C12.1924 65.8764 12.3228 65.8311 12.4581 65.8126C12.5935 65.7941 12.7312 65.8027 12.8632 65.838C12.9952 65.8732 13.1188 65.9344 13.2269 66.018C13.335 66.1015 13.4254 66.2058 13.4928 66.3246C13.5602 66.4435 13.6032 66.5745 13.6194 66.7102C13.6356 66.8459 13.6246 66.9834 13.5871 67.1148L11.7221 74.0768C11.6515 74.3404 11.4791 74.5652 11.2428 74.7017C11.0065 74.8382 10.7257 74.8753 10.4621 74.8048L3.50106 72.9398C3.23731 72.8693 3.01232 72.697 2.87561 72.4607C2.7389 72.2244 2.70165 71.9435 2.77206 71.6798C2.84248 71.416 3.01479 71.191 3.25108 71.0543C3.48738 70.9176 3.76831 70.8803 4.03206 70.9508L8.20606 72.0698C4.77517 66.9409 2.49709 61.1292 1.5288 55.035C0.560514 48.9409 0.925051 42.7093 2.59729 36.7696C4.26953 30.83 7.20971 25.3235 11.2152 20.6297C15.2207 15.9358 20.1963 12.1663 25.7991 9.58076C25.9217 9.52416 26.0542 9.49225 26.1891 9.48688C26.324 9.4815 26.4587 9.50275 26.5854 9.54941C26.7121 9.59607 26.8284 9.66723 26.9276 9.75883C27.0268 9.85042 27.107 9.96066 27.1636 10.0833C27.2202 10.2058 27.2521 10.3384 27.2574 10.4733C27.2628 10.6082 27.2416 10.7429 27.1949 10.8696C27.1482 10.9963 27.0771 11.1126 26.9855 11.2118C26.8939 11.311 26.7837 11.3912 26.6611 11.4478C21.2739 13.9283 16.4957 17.559 12.6624 22.0845C8.82903 26.61 6.03373 31.9204 4.47306 37.6422C2.91238 43.364 2.62422 49.3582 3.62886 55.2033C4.63349 61.0484 6.90651 66.6024 10.2881 71.4748L11.5991 66.5838ZM75.5091 66.9837C75.3777 67.0213 75.2402 67.0323 75.1045 67.0161C74.9688 66.9999 74.8378 66.9569 74.7189 66.8895C74.6001 66.8221 74.4958 66.7317 74.4123 66.6236C74.3287 66.5155 74.2675 66.3919 74.2323 66.2599C74.197 66.1279 74.1884 65.9902 74.2069 65.8548C74.2254 65.7195 74.2707 65.5891 74.3402 65.4715C74.4096 65.3538 74.5017 65.2511 74.6113 65.1694C74.7208 65.0878 74.8455 65.0287 74.9781 64.9958L81.9391 63.1298C82.2028 63.0595 82.4837 63.0968 82.7199 63.2335C82.9562 63.3702 83.1285 63.5951 83.1991 63.8587L85.0661 70.8228C85.1366 71.0865 85.0995 71.3675 84.9629 71.6039C84.8262 71.8403 84.6013 72.0127 84.3376 72.0833C84.0738 72.1538 83.7928 72.1167 83.5564 71.9801C83.32 71.8434 83.1476 71.6185 83.0771 71.3548L81.9571 67.1758C79.2349 72.7154 75.3427 77.5982 70.5492 81.4868C65.7558 85.3753 60.1753 88.177 54.1934 89.6983C48.2114 91.2196 41.9705 91.4243 35.9017 90.2982C29.833 89.172 24.081 86.7419 19.0431 83.1758C18.8365 83.0132 18.7003 82.7775 18.6625 82.5174C18.6248 82.2572 18.6885 81.9925 18.8403 81.778C18.9922 81.5634 19.2207 81.4154 19.4786 81.3646C19.7365 81.3137 20.0041 81.3639 20.2261 81.5048C25.069 84.9258 30.602 87.2453 36.4368 88.3005C42.2715 89.3556 48.2665 89.1207 54.0008 87.6123C59.7351 86.104 65.0698 83.3587 69.6302 79.5692C74.1906 75.7797 77.8663 71.0379 80.3991 65.6768L75.5091 66.9837Z"/>
-                        </mask>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M43.1341 11.5018C43.2297 11.5974 43.3056 11.711 43.3574 11.836C43.4092 11.961 43.4358 12.095 43.4358 12.2303C43.4358 12.3656 43.4092 12.4995 43.3574 12.6245C43.3056 12.7495 43.2297 12.8631 43.1341 12.9588C43.0384 13.0544 42.9248 13.1303 42.7998 13.1821C42.6748 13.2339 42.5409 13.2605 42.4056 13.2605C42.2703 13.2605 42.1363 13.2339 42.0113 13.1821C41.8863 13.1303 41.7727 13.0544 41.6771 12.9588L36.5771 7.85875C36.4812 7.76317 36.4052 7.64962 36.3534 7.52462C36.3015 7.39961 36.2748 7.2656 36.2748 7.13025C36.2748 6.99491 36.3015 6.8609 36.3534 6.73589C36.4052 6.61089 36.4812 6.49734 36.5771 6.40175L41.6771 1.30175C41.7727 1.20609 41.8863 1.1302 42.0113 1.07842C42.1363 1.02665 42.2703 1 42.4056 1C42.5409 1 42.6748 1.02665 42.7998 1.07842C42.9248 1.1302 43.0384 1.20609 43.1341 1.30175C43.2297 1.39742 43.3056 1.511 43.3574 1.63599C43.4092 1.76099 43.4358 1.89496 43.4358 2.03025C43.4358 2.16555 43.4092 2.29952 43.3574 2.42452C43.3056 2.54951 43.2297 2.66309 43.1341 2.75875L40.0791 5.81875C40.3161 5.79875 40.5531 5.78175 40.7901 5.76575C41.7581 5.69909 42.7167 5.66575 43.6661 5.66575C49.2696 5.66562 54.8183 6.76927 59.9953 8.91368C65.1722 11.0581 69.8761 14.2013 73.8382 18.1637C77.8004 22.1261 80.9432 26.8302 83.0873 32.0073C85.2313 37.1845 86.3346 42.7332 86.3341 48.3368C86.3341 48.9461 86.3184 49.5971 86.2871 50.2898C86.2584 50.9318 86.2141 51.5811 86.1541 52.2378C86.1232 52.5039 85.9896 52.7474 85.7817 52.9164C85.5739 53.0854 85.3082 53.1665 85.0414 53.1424C84.7745 53.1182 84.5277 52.9908 84.3535 52.7872C84.1794 52.5837 84.0916 52.3201 84.1091 52.0528C84.1644 51.4528 84.2061 50.8354 84.2341 50.2008C84.2601 49.6281 84.2731 49.0068 84.2731 48.3368C84.2733 43.0041 83.2232 37.7236 81.1826 32.7968C79.142 27.87 76.1509 23.3934 72.3801 19.6227C68.6094 15.8519 64.1328 12.8608 59.206 10.8202C54.2792 8.77964 48.9987 7.72949 43.6661 7.72975C42.7281 7.72975 41.8151 7.75942 40.9271 7.81875C40.4677 7.84875 40.0141 7.88642 39.5661 7.93175L43.1341 11.4988V11.5018ZM11.5991 66.5838C11.632 66.4512 11.6911 66.3265 11.7728 66.217C11.8544 66.1074 11.9571 66.0153 12.0748 65.9459C12.1924 65.8764 12.3228 65.8311 12.4581 65.8126C12.5935 65.7941 12.7312 65.8027 12.8632 65.838C12.9952 65.8732 13.1188 65.9344 13.2269 66.018C13.335 66.1015 13.4254 66.2058 13.4928 66.3246C13.5602 66.4435 13.6032 66.5745 13.6194 66.7102C13.6356 66.8459 13.6246 66.9834 13.5871 67.1148L11.7221 74.0768C11.6515 74.3404 11.4791 74.5652 11.2428 74.7017C11.0065 74.8382 10.7257 74.8753 10.4621 74.8048L3.50106 72.9398C3.23731 72.8693 3.01232 72.697 2.87561 72.4607C2.7389 72.2244 2.70165 71.9435 2.77206 71.6798C2.84248 71.416 3.01479 71.191 3.25108 71.0543C3.48738 70.9176 3.76831 70.8803 4.03206 70.9508L8.20606 72.0698C4.77517 66.9409 2.49709 61.1292 1.5288 55.035C0.560514 48.9409 0.925051 42.7093 2.59729 36.7696C4.26953 30.83 7.20971 25.3235 11.2152 20.6297C15.2207 15.9358 20.1963 12.1663 25.7991 9.58076C25.9217 9.52416 26.0542 9.49225 26.1891 9.48688C26.324 9.4815 26.4587 9.50275 26.5854 9.54941C26.7121 9.59607 26.8284 9.66723 26.9276 9.75883C27.0268 9.85042 27.107 9.96066 27.1636 10.0833C27.2202 10.2058 27.2521 10.3384 27.2574 10.4733C27.2628 10.6082 27.2416 10.7429 27.1949 10.8696C27.1482 10.9963 27.0771 11.1126 26.9855 11.2118C26.8939 11.311 26.7837 11.3912 26.6611 11.4478C21.2739 13.9283 16.4957 17.559 12.6624 22.0845C8.82903 26.61 6.03373 31.9204 4.47306 37.6422C2.91238 43.364 2.62422 49.3582 3.62886 55.2033C4.63349 61.0484 6.90651 66.6024 10.2881 71.4748L11.5991 66.5838ZM75.5091 66.9837C75.3777 67.0213 75.2402 67.0323 75.1045 67.0161C74.9688 66.9999 74.8378 66.9569 74.7189 66.8895C74.6001 66.8221 74.4958 66.7317 74.4123 66.6236C74.3287 66.5155 74.2675 66.3919 74.2323 66.2599C74.197 66.1279 74.1884 65.9902 74.2069 65.8548C74.2254 65.7195 74.2707 65.5891 74.3402 65.4715C74.4096 65.3538 74.5017 65.2511 74.6113 65.1694C74.7208 65.0878 74.8455 65.0287 74.9781 64.9958L81.9391 63.1298C82.2028 63.0595 82.4837 63.0968 82.7199 63.2335C82.9562 63.3702 83.1285 63.5951 83.1991 63.8587L85.0661 70.8228C85.1366 71.0865 85.0995 71.3675 84.9629 71.6039C84.8262 71.8403 84.6013 72.0127 84.3376 72.0833C84.0738 72.1538 83.7928 72.1167 83.5564 71.9801C83.32 71.8434 83.1476 71.6185 83.0771 71.3548L81.9571 67.1758C79.2349 72.7154 75.3427 77.5982 70.5492 81.4868C65.7558 85.3753 60.1753 88.177 54.1934 89.6983C48.2114 91.2196 41.9705 91.4243 35.9017 90.2982C29.833 89.172 24.081 86.7419 19.0431 83.1758C18.8365 83.0132 18.7003 82.7775 18.6625 82.5174C18.6248 82.2572 18.6885 81.9925 18.8403 81.778C18.9922 81.5634 19.2207 81.4154 19.4786 81.3646C19.7365 81.3137 20.0041 81.3639 20.2261 81.5048C25.069 84.9258 30.602 87.2453 36.4368 88.3005C42.2715 89.3556 48.2665 89.1207 54.0008 87.6123C59.7351 86.104 65.0698 83.3587 69.6302 79.5692C74.1906 75.7797 77.8663 71.0379 80.3991 65.6768L75.5091 66.9837Z" fill="#0056FF"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M43.1341 11.5018C43.2297 11.5974 43.3056 11.711 43.3574 11.836C43.4092 11.961 43.4358 12.095 43.4358 12.2303C43.4358 12.3656 43.4092 12.4995 43.3574 12.6245C43.3056 12.7495 43.2297 12.8631 43.1341 12.9588C43.0384 13.0544 42.9248 13.1303 42.7998 13.1821C42.6748 13.2339 42.5409 13.2605 42.4056 13.2605C42.2703 13.2605 42.1363 13.2339 42.0113 13.1821C41.8863 13.1303 41.7727 13.0544 41.6771 12.9588L36.5771 7.85875C36.4812 7.76317 36.4052 7.64962 36.3534 7.52462C36.3015 7.39961 36.2748 7.2656 36.2748 7.13025C36.2748 6.99491 36.3015 6.8609 36.3534 6.73589C36.4052 6.61089 36.4812 6.49734 36.5771 6.40175L41.6771 1.30175C41.7727 1.20609 41.8863 1.1302 42.0113 1.07842C42.1363 1.02665 42.2703 1 42.4056 1C42.5409 1 42.6748 1.02665 42.7998 1.07842C42.9248 1.1302 43.0384 1.20609 43.1341 1.30175C43.2297 1.39742 43.3056 1.511 43.3574 1.63599C43.4092 1.76099 43.4358 1.89496 43.4358 2.03025C43.4358 2.16555 43.4092 2.29952 43.3574 2.42452C43.3056 2.54951 43.2297 2.66309 43.1341 2.75875L40.0791 5.81875C40.3161 5.79875 40.5531 5.78175 40.7901 5.76575C41.7581 5.69909 42.7167 5.66575 43.6661 5.66575C49.2696 5.66562 54.8183 6.76927 59.9953 8.91368C65.1722 11.0581 69.8761 14.2013 73.8382 18.1637C77.8004 22.1261 80.9432 26.8302 83.0873 32.0073C85.2313 37.1845 86.3346 42.7332 86.3341 48.3368C86.3341 48.9461 86.3184 49.5971 86.2871 50.2898C86.2584 50.9318 86.2141 51.5811 86.1541 52.2378C86.1232 52.5039 85.9896 52.7474 85.7817 52.9164C85.5739 53.0854 85.3082 53.1665 85.0414 53.1424C84.7745 53.1182 84.5277 52.9908 84.3535 52.7872C84.1794 52.5837 84.0916 52.3201 84.1091 52.0528C84.1644 51.4528 84.2061 50.8354 84.2341 50.2008C84.2601 49.6281 84.2731 49.0068 84.2731 48.3368C84.2733 43.0041 83.2232 37.7236 81.1826 32.7968C79.142 27.87 76.1509 23.3934 72.3801 19.6227C68.6094 15.8519 64.1328 12.8608 59.206 10.8202C54.2792 8.77964 48.9987 7.72949 43.6661 7.72975C42.7281 7.72975 41.8151 7.75942 40.9271 7.81875C40.4677 7.84875 40.0141 7.88642 39.5661 7.93175L43.1341 11.4988V11.5018ZM11.5991 66.5838C11.632 66.4512 11.6911 66.3265 11.7728 66.217C11.8544 66.1074 11.9571 66.0153 12.0748 65.9459C12.1924 65.8764 12.3228 65.8311 12.4581 65.8126C12.5935 65.7941 12.7312 65.8027 12.8632 65.838C12.9952 65.8732 13.1188 65.9344 13.2269 66.018C13.335 66.1015 13.4254 66.2058 13.4928 66.3246C13.5602 66.4435 13.6032 66.5745 13.6194 66.7102C13.6356 66.8459 13.6246 66.9834 13.5871 67.1148L11.7221 74.0768C11.6515 74.3404 11.4791 74.5652 11.2428 74.7017C11.0065 74.8382 10.7257 74.8753 10.4621 74.8048L3.50106 72.9398C3.23731 72.8693 3.01232 72.697 2.87561 72.4607C2.7389 72.2244 2.70165 71.9435 2.77206 71.6798C2.84248 71.416 3.01479 71.191 3.25108 71.0543C3.48738 70.9176 3.76831 70.8803 4.03206 70.9508L8.20606 72.0698C4.77517 66.9409 2.49709 61.1292 1.5288 55.035C0.560514 48.9409 0.925051 42.7093 2.59729 36.7696C4.26953 30.83 7.20971 25.3235 11.2152 20.6297C15.2207 15.9358 20.1963 12.1663 25.7991 9.58076C25.9217 9.52416 26.0542 9.49225 26.1891 9.48688C26.324 9.4815 26.4587 9.50275 26.5854 9.54941C26.7121 9.59607 26.8284 9.66723 26.9276 9.75883C27.0268 9.85042 27.107 9.96066 27.1636 10.0833C27.2202 10.2058 27.2521 10.3384 27.2574 10.4733C27.2628 10.6082 27.2416 10.7429 27.1949 10.8696C27.1482 10.9963 27.0771 11.1126 26.9855 11.2118C26.8939 11.311 26.7837 11.3912 26.6611 11.4478C21.2739 13.9283 16.4957 17.559 12.6624 22.0845C8.82903 26.61 6.03373 31.9204 4.47306 37.6422C2.91238 43.364 2.62422 49.3582 3.62886 55.2033C4.63349 61.0484 6.90651 66.6024 10.2881 71.4748L11.5991 66.5838ZM75.5091 66.9837C75.3777 67.0213 75.2402 67.0323 75.1045 67.0161C74.9688 66.9999 74.8378 66.9569 74.7189 66.8895C74.6001 66.8221 74.4958 66.7317 74.4123 66.6236C74.3287 66.5155 74.2675 66.3919 74.2323 66.2599C74.197 66.1279 74.1884 65.9902 74.2069 65.8548C74.2254 65.7195 74.2707 65.5891 74.3402 65.4715C74.4096 65.3538 74.5017 65.2511 74.6113 65.1694C74.7208 65.0878 74.8455 65.0287 74.9781 64.9958L81.9391 63.1298C82.2028 63.0595 82.4837 63.0968 82.7199 63.2335C82.9562 63.3702 83.1285 63.5951 83.1991 63.8587L85.0661 70.8228C85.1366 71.0865 85.0995 71.3675 84.9629 71.6039C84.8262 71.8403 84.6013 72.0127 84.3376 72.0833C84.0738 72.1538 83.7928 72.1167 83.5564 71.9801C83.32 71.8434 83.1476 71.6185 83.0771 71.3548L81.9571 67.1758C79.2349 72.7154 75.3427 77.5982 70.5492 81.4868C65.7558 85.3753 60.1753 88.177 54.1934 89.6983C48.2114 91.2196 41.9705 91.4243 35.9017 90.2982C29.833 89.172 24.081 86.7419 19.0431 83.1758C18.8365 83.0132 18.7003 82.7775 18.6625 82.5174C18.6248 82.2572 18.6885 81.9925 18.8403 81.778C18.9922 81.5634 19.2207 81.4154 19.4786 81.3646C19.7365 81.3137 20.0041 81.3639 20.2261 81.5048C25.069 84.9258 30.602 87.2453 36.4368 88.3005C42.2715 89.3556 48.2665 89.1207 54.0008 87.6123C59.7351 86.104 65.0698 83.3587 69.6302 79.5692C74.1906 75.7797 77.8663 71.0379 80.3991 65.6768L75.5091 66.9837Z" stroke="#0056FF" stroke-width="0.6" mask="url(#path-1-outside-1_198_121)"/>
-                    </svg>
-                    <h4 class="text__card">Consistencia</h4>
-                    <div class="card__overlay">
-                        <p>La consistencia es una de las claves para crear un diseño eficaz. Cuando todos los elementos de un diseño se combinan de manera armoniosa, crean una experiencia más agradable y fácil de usar.</p>
-                    </div>
-                </div>
-                <div class="card__forms" data-aos="fade-right" data-aos-duration="1000"data-aos-offset="250">
-                    <svg class="icon__card" xmlns="http://www.w3.org/2000/svg" width="auto" height="70" viewBox="0 0 87 92" fill="none">
-                        <path d="M5.42857 64.7273H1.35714C0.607613 64.7273 0 64.1235 0 63.3788V37.7548C0 32.5428 4.25116 28.3182 9.49669 28.3182H28.5033C33.7491 28.3182 38 32.5413 38 37.7548V63.3788C38 64.1235 37.3924 64.7273 36.6429 64.7273H32.5714V87.6515C32.5714 88.3963 31.9638 89 31.2143 89H6.78571C6.03618 89 5.42857 88.3963 5.42857 87.6515V64.7273ZM20.3571 86.303H29.8571V63.3788C29.8571 62.634 30.4648 62.0303 31.2143 62.0303H35.2857V37.7548C35.2857 34.0309 32.2501 31.0152 28.5033 31.0152H9.49669C5.7503 31.0152 2.71429 34.0322 2.71429 37.7548V62.0303H6.78571C7.53524 62.0303 8.14286 62.634 8.14286 63.3788V86.303H17.6429V68.7727C17.6429 68.028 18.2505 67.4242 19 67.4242C19.7495 67.4242 20.3571 68.028 20.3571 68.7727V86.303ZM19 24.2727C12.2542 24.2727 6.78571 18.8391 6.78571 12.1364C6.78571 5.43363 12.2542 0 19 0C25.7458 0 31.2143 5.43363 31.2143 12.1364C31.2143 18.8391 25.7458 24.2727 19 24.2727ZM19 21.5758C24.2467 21.5758 28.5 17.3496 28.5 12.1364C28.5 6.92313 24.2467 2.69697 19 2.69697C13.7533 2.69697 9.5 6.92313 9.5 12.1364C9.5 17.3496 13.7533 21.5758 19 21.5758Z" fill="#0056FF"/>
-                    </svg>
-                    <h4 class="text__card">Pensar en el Usuario</h4>
-                    <div class="card__overlay">
-                        <p>El usuario es el centro de todo diseño. Comprender a fondo sus necesidades, expectativas y capacidades es esencial para crear una experiencia que cumpla sus objetivos y resuelva sus problemas.</p>
-                    </div>
-                </div>
-                <div class="card__forms" data-aos="fade-right" data-aos-duration="1300" data-aos-offset="300">
-                    <svg class="icon__card" xmlns="http://www.w3.org/2000/svg" width="auto" height="70" viewBox="0 0 87 92" fill="none">
-                        <path d="M18.32 54.6119C9.29209 54.6119 1.9462 61.9961 1.9462 71.0577C1.9462 80.1193 9.29209 87.5034 18.32 87.5034C27.3847 87.5034 34.7325 80.1194 34.7325 71.0577C34.7325 61.9959 27.3847 54.6119 18.32 54.6119ZM18.32 56.8128C26.1907 56.8128 32.5327 63.1836 32.5327 71.0577C32.5327 78.9316 26.1907 85.3036 18.32 85.3036C10.4915 85.3036 4.14598 78.9318 4.14598 71.0577C4.14598 63.1835 10.4915 56.8128 18.32 56.8128Z" fill="#0056FF" stroke="#0056FF" stroke-width="0.2"/>
-                        <path d="M70.9457 9.36438L70.9456 9.3643L70.9421 9.36741L61.1923 18.1485C60.7585 18.5371 60.7178 19.2777 61.1066 19.7116C61.4952 20.1454 62.2358 20.1861 62.6696 19.7975L62.67 19.7972L71.0925 12.1739C72.192 20.1659 71.0261 25.3675 68.5824 29.0111L68.6655 29.0668L68.5824 29.0111C65.9397 32.9519 61.6784 35.2325 56.6628 37.0352C54.5526 37.7936 52.3211 38.4623 50.0487 39.1433C49.621 39.2714 49.1919 39.4 48.7618 39.5298C46.0482 40.3482 43.2996 41.2107 40.6589 42.2867C35.3771 44.4389 30.4649 47.4804 27.2672 52.7965L27.2671 52.7966C26.9687 53.294 27.1479 54.0105 27.6452 54.3089L27.6452 54.3089C28.1425 54.6072 28.8589 54.4282 29.1574 53.9309C32.0336 49.1492 36.4301 46.3751 41.4844 44.3157C44.0117 43.2859 46.6887 42.448 49.3843 41.6341C49.7669 41.5186 50.15 41.4036 50.533 41.2885C52.8469 40.5935 55.1608 39.8985 57.3867 39.0984C62.5747 37.2337 67.3704 34.7722 70.4047 30.2475C73.0514 26.3008 74.2489 20.8869 73.4232 13.2918L80.8676 21.2225C81.045 21.4926 81.3457 21.6498 81.6548 21.6883C81.9668 21.7271 82.3003 21.6465 82.5391 21.4233C82.7778 21.2002 82.8807 20.8729 82.8629 20.5589C82.8453 20.2479 82.7085 19.9372 82.4508 19.742L72.8318 9.46718L72.8311 9.46648C72.4954 9.11475 72.2121 8.91792 71.9048 8.90723C71.5994 8.89661 71.3028 9.07152 70.9457 9.36438Z" fill="#0056FF" stroke="#0056FF" stroke-width="0.2"/>
-                        <path d="M62.5981 61.3107L62.5981 61.3109C62.6319 61.3093 62.6655 61.3092 62.6993 61.3108C62.6999 61.3108 62.7006 61.3108 62.7013 61.3109L62.6966 61.4108C62.8312 61.4118 62.9643 61.4399 63.0879 61.4936C63.2114 61.5473 63.3228 61.6255 63.4154 61.7233L62.5981 61.3107ZM62.5981 61.3107L62.5931 61.3112C62.3834 61.3316 62.184 61.4118 62.0186 61.5423C61.8531 61.6727 61.7286 61.8479 61.6598 62.047C61.591 62.2461 61.5809 62.4608 61.6306 62.6655C61.6801 62.8699 61.7872 63.0557 61.9391 63.201L73.0242 74.3172L61.942 85.4613C61.8236 85.5576 61.7265 85.6774 61.6569 85.8132C61.5864 85.9507 61.5456 86.1015 61.5373 86.2558C61.5289 86.41 61.5532 86.5644 61.6084 86.7087C61.6637 86.8529 61.7487 86.984 61.8579 87.0932C61.9672 87.2025 62.0982 87.2875 62.2425 87.3427C62.3868 87.398 62.5411 87.4222 62.6954 87.4139C62.8497 87.4055 63.0004 87.3647 63.1379 87.2942C63.2737 87.2246 63.3936 87.1275 63.4899 87.009L74.5715 75.8963L85.6251 87.012C85.6252 87.0121 85.6253 87.0122 85.6254 87.0123C85.7268 87.1159 85.8477 87.1986 85.9811 87.2556C86.1146 87.3126 86.2581 87.3427 86.4032 87.3443C86.5483 87.3459 86.6924 87.3189 86.8271 87.2649C86.9619 87.2108 87.0846 87.1307 87.1884 87.0292C87.2922 86.9276 87.3749 86.8066 87.432 86.6731C87.489 86.5396 87.5192 86.3962 87.5207 86.251C87.5223 86.1059 87.4953 85.9618 87.4412 85.8271C87.3872 85.6923 87.3071 85.5695 87.2056 85.4658L87.205 85.4652L76.1189 74.3172L87.2034 63.2016C87.2037 63.2014 87.2039 63.2011 87.2042 63.2009C87.3655 63.0452 87.4755 62.8438 87.5192 62.6239C87.563 62.4036 87.5384 62.1751 87.4485 61.9693C87.3587 61.7634 87.208 61.59 87.0167 61.4723C86.8257 61.3548 86.6032 61.2984 86.3793 61.3109C86.0927 61.3224 85.822 61.4454 85.6248 61.6536L74.5715 72.769L63.4871 61.6535L62.5981 61.3107Z" fill="#0056FF" stroke="#0056FF" stroke-width="0.2"/>
-                        <path d="M1.8122 0.904844L1.81217 0.904478L1.80372 0.90601C1.6025 0.942517 1.41544 1.03442 1.26354 1.17134C1.11164 1.30826 1.00091 1.48482 0.943789 1.68118C0.886665 1.87755 0.885407 2.08591 0.940155 2.28295C0.994709 2.47928 1.10272 2.65661 1.25213 2.79514L12.3055 13.9107L1.25167 25.0267C1.25148 25.0268 1.25129 25.027 1.2511 25.0272C1.14754 25.1286 1.06493 25.2494 1.00797 25.3826C0.950904 25.5162 0.920701 25.6596 0.919084 25.8048C0.917468 25.95 0.94447 26.0941 0.998549 26.2288C1.05262 26.3636 1.13272 26.4864 1.23426 26.5902C1.3358 26.694 1.45679 26.7768 1.59032 26.8338C1.72388 26.8908 1.86734 26.9209 2.0125 26.9225C2.1577 26.9241 2.30178 26.897 2.43651 26.8429C2.57125 26.7888 2.69401 26.7087 2.79778 26.6071L2.79863 26.6063L13.884 15.4899L24.9382 26.6062L24.9391 26.6071C25.1487 26.8122 25.4312 26.9255 25.7244 26.9223C26.0175 26.9191 26.2974 26.7996 26.5025 26.59C26.7075 26.3804 26.8209 26.0979 26.8177 25.8048C26.8144 25.5118 26.6951 25.2321 26.4858 25.0272C26.4856 25.027 26.4855 25.0268 26.4853 25.0267L15.4314 13.9107L26.4849 2.79504C26.4851 2.79481 26.4854 2.79458 26.4856 2.79435C26.6443 2.64057 26.7531 2.44253 26.7977 2.22604C26.8423 2.00923 26.8205 1.78399 26.7351 1.57977C26.6497 1.37555 26.5046 1.20189 26.3189 1.0814C26.1335 0.961067 25.916 0.89936 25.695 0.904413C25.4128 0.906827 25.1424 1.01758 24.9395 1.21378L24.9382 1.21514L13.884 12.3314L2.79863 1.21504L2.79864 1.21503L2.79738 1.2138C2.69266 1.11244 2.56884 1.03287 2.43311 0.979761C2.2992 0.92736 2.15634 0.901746 2.01262 0.904311C1.94594 0.89839 1.87885 0.898568 1.8122 0.904844Z" fill="#0056FF" stroke="#0056FF" stroke-width="0.2"/>
-                    </svg>
-                    <h4 class="text__card">Trazar el plan</h4>
-                    <div class="card__overlay">
-                        <p>Antes de empezar a diseñar, es importante trazar un plan. Esto nos ayudará a definir los objetivos del proyecto y el diseño, los usuarios a los que va dirigido y los recursos que tenemos disponibles.</p>
-                    </div>
-                </div>
 
+    <div class="background-glow"></div>
+
+    <main class="container">
+        <header>
+            <div class="header-left">
+                <div class="status-indicator"></div>
+                <div class="my-identity" id="role-text">EMANUEL MORANO SOLÉ | DISEÑADOR DE PRODUCTO</div>
             </div>
+            <button class="lang-switch" id="lang-toggle" onclick="toggleLanguage()" aria-label="Cambiar idioma">EN</button>
+        </header>
+        
+        <article>
+            <h1 id="main-title">Iterando<br>el sistema.</h1>
+            <p class="subtext" id="sub-text">Actualizando versión 2026. La calidad requiere tiempo.</p>
         </article>
-    </section>
-    <!-- Footer -->
-    <footer>
-        <div class="footer__box1">
-            <div class="footer__box2">
-                <p class="e__logo icon__hover"><a class="alink" href="https://www.emanuelmoranosole.com/">E.</a></p>
-                <h4 class="work__together">Trabajemos Juntos!</h4>
-                <div class="footer__box2b">
-                    <a href="mailto:emanueljmoranosole@gmail.com" target="_blank">
-                        <svg class="icons__footer icon__gmail icon__hover" xmlns="http://www.w3.org/2000/svg" width="59" height="44" viewBox="0 0 59 44" fill="currentColor">
-                        <path d="M59 5.99929V39.9979C59 42.2063 57.2 43.998 54.9789 43.998H45.5892V21.333L29.499 33.3355L13.4088 21.333V44H4.02107C1.80004 44 0 42.2102 0 40.0018V39.9998V6.00125C0 2.68765 2.70104 0 6.03358 0C7.39885 0 8.6579 0.451854 9.66907 1.21081L9.65333 1.19908L29.499 16.0007L49.3447 1.19908C50.3401 0.449898 51.5992 0 52.9645 0C56.297 0 59 2.68569 59 5.99929Z" />
-                        </svg>
-                    </a>
-                    <a href="https://wa.me/5491133168094" target="_blank">
-                        <svg class="icons__footer icon__size icon__hover" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                        <path d="M0.758579 54.7567L0.64613 55.1748L1.06446 55.0631L15.4599 51.2217C21.1303 54.2463 27.7005 55.1408 33.9769 53.7404C40.2855 52.3329 45.8743 48.7012 49.7176 43.5119C53.5609 38.3225 55.4007 31.9234 54.8996 25.4889C54.3984 19.0544 51.5898 13.0162 46.9892 8.48237C42.3887 3.94851 36.3048 1.22304 29.8541 0.806067C23.4032 0.389091 17.0181 2.30846 11.8704 6.21201L12.0214 6.41121L11.8704 6.21201C6.7226 10.1157 3.15746 15.7418 1.82928 22.058C0.508067 28.341 1.48855 34.8877 4.59049 40.5088L0.758579 54.7567ZM16.3169 45.3714L16.2267 45.3179L16.1253 45.3449L8.44755 47.387L10.4919 39.7981L10.5197 39.6947L10.4641 39.6032L9.90211 38.6781L9.90138 38.6769C7.866 35.3682 6.79047 31.5604 6.79418 27.6775L6.79418 27.6769C6.78722 22.9934 8.33236 18.4392 11.1888 14.7238C14.0452 11.0084 18.0525 8.34055 22.5863 7.13629L22.5221 6.89467L22.5863 7.13629C27.1202 5.93191 31.9257 6.25873 36.254 8.06563C40.5824 9.87266 44.1903 13.0583 46.5157 17.126C48.8412 21.1937 49.7534 25.915 49.1104 30.5544C48.4673 35.1937 46.3052 39.4903 42.9607 42.7749C39.6162 46.0594 35.2772 48.1472 30.62 48.7129C25.9627 49.2785 21.2489 48.2902 17.2131 45.902L16.3169 45.3714Z" fill="white" stroke="white" stroke-width="0.5"/>
-                        <path d="M34.0865 30.2538L34.0666 30.2584L34.0477 30.2663C33.4791 30.5021 33.0371 31.0499 32.674 31.5852C32.536 31.7886 32.4033 31.9998 32.2773 32.2004C32.2351 32.2676 32.1937 32.3336 32.153 32.3977C31.9881 32.6578 31.836 32.8877 31.6874 33.0678L31.6825 33.0737L31.6779 33.08C31.5792 33.216 31.434 33.3116 31.2695 33.3486C31.1051 33.3855 30.9329 33.3612 30.7852 33.2804L30.7711 33.2727L30.7562 33.2669C27.194 31.8741 24.2083 29.3198 22.2838 26.0191L22.2747 26.0033L22.2633 25.9891C22.1371 25.8309 22.0774 25.6299 22.0967 25.4286C22.1161 25.2272 22.2129 25.0412 22.3669 24.9095L22.3738 24.9037L22.3802 24.8973C23.1217 24.1646 23.6661 23.257 23.9631 22.2584L23.9713 22.2308L23.973 22.202C24.0387 21.106 23.7897 20.0143 23.2557 19.0548C22.8378 17.7253 22.0498 16.5416 20.9835 15.6422L20.9567 15.6196L20.9247 15.6052C20.3461 15.3454 19.7044 15.2583 19.0774 15.3544C18.4511 15.4504 17.8657 15.725 17.3919 16.1455C16.6039 16.8245 15.9785 17.6713 15.5616 18.6235C15.1448 19.5753 14.947 20.608 14.9826 21.646C14.9852 22.2279 15.0593 22.8072 15.2029 23.371L15.2029 23.371L15.2038 23.3743C15.5625 24.7068 16.1141 25.9799 16.8411 27.1534C17.3608 28.0436 17.9278 28.9055 18.5397 29.7352C20.5325 32.4663 23.0376 34.7852 25.9157 36.5631C27.359 37.4658 28.9012 38.2003 30.5122 38.7519C32.2096 39.5176 34.0828 39.8113 35.9336 39.6016L35.9336 39.6017L35.9428 39.6003C37.0146 39.4385 38.0301 39.016 38.9 38.3701C39.7698 37.7243 40.4674 36.8749 40.9313 35.8967L40.9325 35.8942C41.2163 35.2788 41.3025 34.5907 41.179 33.9243L41.1791 33.9243L41.1775 33.9168C41.0205 33.1937 40.4657 32.6465 39.8675 32.2179C39.4436 31.9144 38.9629 31.6475 38.5428 31.4144C38.3778 31.3228 38.2222 31.2365 38.0831 31.1551C37.5313 30.7144 36.8868 30.404 36.1977 30.2472C35.5027 30.089 34.7806 30.0913 34.0865 30.2538Z" fill="white" stroke="white" stroke-width="0.5"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/emanuel-morano-sol%C3%A9/" target="_blank">
-                        <svg class="icons__footer icon__size icon__hover" xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50" fill="none">
-                        <path d="M11.087 49.083H0V15.6739H11.087V49.083ZM5.5457 11.2194C2.47904 11.2194 0 8.7226 0 5.64896C0 2.57533 2.48348 0.0830078 5.5457 0.0830078C8.60126 0.0830078 11.087 2.57978 11.087 5.64896C11.087 8.7226 8.60126 11.2194 5.5457 11.2194ZM51 49.083H40.341V32.8239C40.341 28.9462 40.2678 23.9594 34.7997 23.9594C29.2496 23.9594 28.3959 28.1823 28.3959 32.5433V49.083H17.7391V15.6494H27.9702V20.2176H28.1143C29.5379 17.5894 33.017 14.8186 38.2057 14.8186C49.0043 14.8186 51 21.7432 51 30.7459V49.083Z" fill="white"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.behance.net/theoptimistic" target="_blank">
-                        <svg class="icon__size icon__hover" xmlns="http://www.w3.org/2000/svg" width="74" height="48" viewBox="0 0 74 48" fill="none">
-                        <path d="M29.8648 21.0952C29.8648 21.0952 36.8677 20.5739 36.8677 12.3384C36.8677 4.10235 31.1385 0.0830078 23.8811 0.0830078H0V46.1072H23.8811C23.8811 46.1072 38.4597 46.5691 38.4597 32.523C38.4597 32.5231 39.0953 21.0952 29.8648 21.0952ZM22.1622 8.2633H23.8811C23.8811 8.2633 27.1273 8.26329 27.1273 13.0519C27.1273 17.84 25.2182 18.5341 23.0528 18.5341H10.5223V8.2633H22.1622ZM23.2063 37.9272H10.5223V25.6278H23.8811C23.8811 25.6278 28.7194 25.5642 28.7194 31.9485C28.7194 37.3318 25.1057 37.8866 23.2063 37.9272ZM57.9027 11.7929C40.2538 11.7929 40.2694 29.4768 40.2694 29.4768C40.2694 29.4768 39.0585 47.07 57.9027 47.07C57.9027 47.07 73.606 47.9696 73.606 34.8314H65.53C65.53 34.8314 65.7994 39.779 58.172 39.779C58.172 39.779 50.0947 40.3219 50.0947 31.7719H73.8754C73.8754 31.7717 76.4774 11.7929 57.9027 11.7929ZM50.006 25.6278C50.006 25.6278 50.9922 18.534 58.0821 18.534C65.1706 18.534 65.0818 25.6278 65.0818 25.6278H50.006ZM66.9631 8.46197H48.0288V2.79443H66.9631V8.46197Z" fill="white"/>
-                        </svg>
-                    </a>
-                </div>
+
+        <footer>    
+            <div class="links-container">
+                <a href="https://www.linkedin.com/in/emanuel-morano-sol%C3%A9/" target="_blank" class="cta-link">
+                    <span id="link-linkedin">Conectemos en LinkedIn</span>
+                    <span class="arrow-icon">→</span>
+                </a>
+                <a href="emanueljmoranosole@gmail.com" class="cta-link">
+                    <span id="link-email">Envíame un Email</span>
+                    <span class="arrow-icon">→</span>
+                </a>
             </div>
-            <div class="footer__box3">
-                <p class="lastText"><span class="effect__lastText">Hecho por Emanuel Morano Solé</span></p>
-                <p class="lastText asd">2023 | Todos los derechos reservados</p>
-                <p class="lastText">Estoy para ayudarte</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Scripts -->
-    <script src="./assets/script/script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        </footer>
+    </main>
+
     <script>
-        AOS.init();
+        // --- TEXTOS ---
+        const translations = {
+            es: {
+                role: "EMANUEL MORANO SOLÉ | DISEÑADOR DE PRODUCTO",
+                title: "Diseñando <br>lo que viene.",
+                subtext: "Actualizando versión 2026. La calidad requiere tiempo.",
+                linkedin: "Conectemos en LinkedIn",
+                email: "Envíame un Email",
+                btn: "EN"
+            },
+            en: {
+                role: "EMANUEL MORANO SOLÉ | PRODUCT DESIGNER",
+                title: "Designing <br>what's next.",
+                subtext: "Updating version 2026. Quality takes time.",
+                linkedin: "Let's connect on LinkedIn",
+                email: "Send me an Email",
+                btn: "ES"
+            }
+        };
+
+        let currentLang = 'es';
+
+        // --- FUNCIONES ---
+        function updateDOM(lang) {
+            const t = translations[lang];
+            
+            document.getElementById('main-title').innerHTML = t.title;
+            document.getElementById('role-text').textContent = t.role;
+            document.getElementById('sub-text').textContent = t.subtext;
+            document.getElementById('link-linkedin').textContent = t.linkedin;
+            document.getElementById('link-email').textContent = t.email;
+            document.getElementById('lang-toggle').textContent = t.btn;
+
+            document.documentElement.lang = lang;
+            currentLang = lang;
+        }
+
+        function toggleLanguage() {
+            const newLang = currentLang === 'es' ? 'en' : 'es';
+            updateDOM(newLang);
+        }
+
+        function initLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage; 
+            if (!browserLang.startsWith('es')) {
+                updateDOM('en');
+            } else {
+                updateDOM('es');
+            }
+        }
+
+        // --- MOUSE GLOW (Optimizado) ---
+        // En movil esto no hace mucho, pero no molesta.
+        let ticking = false;
+        document.addEventListener('mousemove', (e) => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const x = e.clientX / window.innerWidth * 100;
+                    const y = e.clientY / window.innerHeight * 100;
+                    document.documentElement.style.setProperty('--cursor-x', `${x}%`);
+                    document.documentElement.style.setProperty('--cursor-y', `${y}%`);
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        initLanguage();
+
     </script>
 </body>
 </html>
