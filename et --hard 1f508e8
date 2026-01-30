@@ -1,0 +1,10 @@
+[33mcde8f26[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mv2-nueva-web[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33me9ba4ca[m[33m ([m[1;31morigin/v2-nueva-web[m[33m, [m[1;31morigin/backup-web-vieja-2026[m[33m)[m HEAD@{1}: checkout: moving from main to v2-nueva-web
+[33m1f508e8[m[33m ([m[1;32mmain[m[33m)[m HEAD@{2}: commit: estructura pagina web 2026
+[33md058450[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{3}: commit: arreglo btn en-es
+[33mff8846d[m HEAD@{4}: commit: agrego btn wsp y agrego el mail
+[33m7252a8a[m HEAD@{5}: commit: pause
+[33mcde8f26[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mv2-nueva-web[m[33m)[m HEAD@{6}: checkout: moving from backup-web-vieja-2026 to main
+[33m457d3fc[m[33m ([m[1;32mbackup-web-vieja-2026[m[33m)[m HEAD@{7}: commit: ready
+[33me9ba4ca[m[33m ([m[1;31morigin/v2-nueva-web[m[33m, [m[1;31morigin/backup-web-vieja-2026[m[33m)[m HEAD@{8}: checkout: moving from v2-nueva-web to backup-web-vieja-2026
+[33me9ba4ca[m[33m ([m[1;31morigin/v2-nueva-web[m[33m, [m[1;31morigin/backup-web-vieja-2026[m[33m)[m HEAD@{9}: clone: from https://github.com/Emanuelbig/My-web-2.0.git
