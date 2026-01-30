@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intangible | Emanuel Morano Solé</title>
+    <meta name="theme-color" content="#0056FF">
+    <link rel="icon" href="./assets/images/favicon 16x16.ico" sizes="16x16" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-signature">
+            <a href="index.html"><img src="./assets/images/Emanuel Morano Sole_signature-02-01.png" alt="Emanuel Morano Solé"></a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="./index.html" class="nav-item">INICIO</a>
+            <a href="./destacados.html" class="nav-item">VOLVER</a>
+            <a href="./about.html" class="nav-item">SOBRE MÍ</a>
+            <button class="lang-btn" id="lang-toggle" onclick="toggleLanguage()">EN</button>
+
+        </div>
+    </nav>
+
+    <header class="work-header" data-aos="fade-up">
+        <span class="label-cat">Portfolio Intangible</span>
+        <h1>Experiencia Digital &<br>Sistemas UX/UI.</h1>
+    </header>
+
+    <section class="projects-grid">
+        <a href="LINK_BEHANCE_DIGITAL_1" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="img-wrapper">
+                <img src="https://via.placeholder.com/800x600" alt="App Design">
+            </div>
+            <h3 class="p-title">Fintech App</h3>
+            <p class="p-desc">Rediseño completo de billetera virtual.</p>
+        </a>
+
+        <a href="LINK_BEHANCE_DIGITAL_2" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="img-wrapper">
+                <img src="https://via.placeholder.com/800x600" alt="Dashboard">
+            </div>
+            <h3 class="p-title">SaaS Dashboard</h3>
+            <p class="p-desc">Sistema de gestión para logística.</p>
+        </a>
+
+        <a href="LINK_BEHANCE_DIGITAL_3" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="img-wrapper">
+                <img src="https://via.placeholder.com/800x600" alt="Website">
+            </div>
+            <h3 class="p-title">E-Commerce</h3>
+            <p class="p-desc">Experiencia de compra optimizada.</p>
+        </a>
+    </section>
+
+    <footer>
+        <a href="destacados.html" class="back-link">← Volver a Destacados</a>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

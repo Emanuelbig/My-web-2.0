@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí | Emanuel Morano Solé</title>
+    <meta name="theme-color" content="#0056FF">
+    
+    <link rel="icon" href="./assets/images/favicon 16x16.ico" sizes="16x16" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600&family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="brand-signature">
+             <a href="index.html">
+                <img src="./assets/images/Emanuel Morano Sole_signature-02-01.png" alt="Emanuel Morano Solé"> 
+             </a>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="./index.html" class="nav-item">INICIO</a> 
+            <a href="./destacados.html" class="nav-item">DESTACADOS</a> 
+            <button class="lang-btn" id="lang-toggle">EN</button>
+        </div>
+    </nav>
+
+    <header class="hero about-hero">
+        <div class="hero-split">
+            <div class="hero-image-container" data-aos="fade-right">
+                <img src="./assets/images/tu-foto-perfil.jpg" alt="Emanuel Morano Solé" class="profile-img">
+            </div>
+            
+            <div class="hero-content-about" data-aos="fade-left">
+                <h1 style="font-size: clamp(2.5rem, 5vw, 4.5rem);">
+                    <span class="gradient-text">Diseño con</span><br>
+                    <span class="highlight">Propósito.</span>
+                </h1>
+                <div class="hero-sub">
+                    <p>Soy Emanuel, un Product Designer (UX/UI) basado en Buenos Aires. Mi enfoque une el rigor del diseño industrial con la agilidad digital para crear soluciones que no solo se ven bien, sino que funcionan para las personas.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container about-details">
+        <div class="bento-grid-about">
+            <div class="bento-item" data-aos="fade-up">
+                <span class="label-cat">Ubicación</span>
+                <p class="p-title">CABA, Argentina</p>
+            </div>
+            <div class="bento-item" data-aos="fade-up" data-aos-delay="100">
+                <span class="label-cat">Lifestyle</span>
+                <p class="p-title">Vegetariano & Fitness</p>
+            </div>
+            <div class="bento-item" data-aos="fade-up" data-aos-delay="200">
+                <span class="label-cat">Intereses</span>
+                <p class="p-title">Socio-política & Historia</p>
+            </div>
+        </div>
+
+        <div class="process-box" data-aos="zoom-in">
+            <span class="label-cat" style="color: white; border-color: white;">Mi Enfoque de Producto</span>
+            <div class="process-steps">
+                <div class="step-item">
+                    <h3>01. Empatía</h3>
+                    <p>Entender al usuario y el negocio antes de mover un píxel.</p>
+                </div>
+                <div class="step-item">
+                    <h3>02. Estructura</h3>
+                    <p>Arquitectura de información y flujos que eliminan la fricción.</p>
+                </div>
+                <div class="step-item">
+                    <h3>03. Estética</h3>
+                    <p>Interfaces de alta fidelidad y sistemas de diseño escalables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="cta-container">
+                <h2 id="footer-title">¿Hablamos de diseño?</h2>
+                <a href="mailto:emanueljmoranosole@gmail.com" class="email-link">emanueljmoranosole@gmail.com</a>
+            </div>
+            <img src="./assets/images/Emanuel Morano Sole_signature-02-01.png" alt="Firma" style="max-width: 150px; opacity: 0.6; filter: grayscale(1);">
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({duration: 1000, once: true});</script>
+</body>
+</html>
