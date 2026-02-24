@@ -508,3 +508,49 @@ footer { padding: 4rem 4%; background: #f9f9f9; text-align: center; border-top: 
         font-size: 0.75rem;
     }
 }
+
+/* =========================================
+   SCROLL INDICATOR (Brutalist Arrow - Mobile Only)
+   ========================================= */
+
+/* Animación de rebote sutil */
+@keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(15px); }
+}
+
+/* Por defecto oculto en desktop */
+.scroll-indicator {
+    display: none;
+}
+
+/* Solo visible en mobile */
+@media (max-width: 768px) {
+    /* Aseguramos que el padre tenga posición relativa para ubicar la flecha */
+    .hero {
+        position: relative; 
+        /* Si sentís que queda muy pegado el texto arriba, podés aumentar un poco el padding inferior del hero acá:
+        padding-bottom: 10rem; */
+    }
+
+    .scroll-indicator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute; /* Lo posicionamos "flotando" */
+        bottom: 3rem; /* A 3rem del piso del header */
+        left: 0;
+        width: 100%;
+        animation: bob 2s ease-in-out infinite; /* Animación infinita */
+        opacity: 0.7; /* Un poco sutil para no competir con el título */
+        z-index: 10;
+    }
+
+    /* Estilo de la flecha */
+    .scroll-indicator svg {
+        width: 40px; /* Tamaño grande y tosco */
+        height: 40px;
+        stroke: var(--text-primary); /* Usa el color negro de tu tema */
+        /* El grosor y las puntas cuadradas ya están definidas en el HTML del SVG */
+    }
+}
