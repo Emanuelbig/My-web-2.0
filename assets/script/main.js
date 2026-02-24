@@ -111,7 +111,9 @@ const translations = {
         d4t: "Appa", d4d: "Aplicación de los shoppings.",
         d5t: "Netvibe", d5d: "Página web para evento.",
         d6t: "Ecoser", d6d: "Aplicación de gestión de residuos para MacDonalds.",
-        d7t: "Ferrazzi Social Media", d7d: "Contenido para redes sociales de @Ferrazzicompeticion."
+        d7t: "Ferrazzi Social Media", d7d: "Contenido para redes sociales de @Ferrazzicompeticion.",
+        // FOOTER CREDITS
+        copyright: "© 2026. Diseñado y Codificado por Emanuel Morano Solé."
     },
     en: {
         btn: "ES",
@@ -186,7 +188,9 @@ const translations = {
         d4t: "Appa", d4d: "Shopping mall application.",
         d5t: "Netvibe", d5d: "Event website.",
         d6t: "Ecoser", d6d: "Waste management application for McDonald's.",
-        d7t: "Ferrazzi Social Media", d7d: "Social media content for @Ferrazzicompeticion."
+        d7t: "Ferrazzi Social Media", d7d: "Social media content for @Ferrazzicompeticion.",
+        // FOOTER CREDITS
+        copyright: "© 2026. Designed & Coded by Emanuel Morano Solé."
     }
 };
 
@@ -273,4 +277,7 @@ window.toggleLanguage = function() {
         const dDesc = document.getElementById(`d${i}-desc`);
         if (dDesc) dDesc.textContent = t[`d${i}d`];
     }
+    // ACTUALIZAR COPYRIGHT
+    const copyText = document.getElementById('copyright-text');
+    if (copyText) copyText.textContent = t.copyright;
 }

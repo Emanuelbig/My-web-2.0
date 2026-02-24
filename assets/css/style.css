@@ -486,3 +486,25 @@ footer { padding: 4rem 4%; background: #f9f9f9; text-align: center; border-top: 
     .bento-grid-about, .process-steps { grid-template-columns: 1fr; }
     .hero-image-container { max-width: 100%; }
 }
+
+/* =========================================
+   7. FOOTER BOTTOM (CREDITS)
+   ========================================= */
+.footer-bottom {
+    margin-top: 3rem; /* Espacio con lo de arriba */
+    padding-top: 1.5rem; /* Espacio interno */
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Línea divisoria sutil */
+    text-align: center; /* Centrado */
+    font-size: 0.85rem; /* Letra chica pero legible */
+    color: var(--text-secondary); /* Gris */
+    font-family: var(--font-display);
+    opacity: 0.8;
+}
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+    .footer-bottom {
+        margin-top: 2rem;
+        font-size: 0.75rem;
+    }
+}
