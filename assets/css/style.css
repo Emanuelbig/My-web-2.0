@@ -547,10 +547,11 @@ footer { padding: 4rem 4%; background: #f9f9f9; text-align: center; border-top: 
     }
 
     /* Estilo de la flecha */
-    .scroll-indicator svg {
-        width: 40px; /* Tamaño grande y tosco */
-        height: 40px;
-        stroke: var(--text-primary); /* Usa el color negro de tu tema */
-        /* El grosor y las puntas cuadradas ya están definidas en el HTML del SVG */
+
+    .hero .scroll-indicator svg {
+        width: 40px !important;  /* El !important es el "martillazo" para asegurar */
+        height: 40px !important;
+        max-width: 40px; /* Doble seguridad */
+        stroke: var(--text-primary); 
     }
 }
