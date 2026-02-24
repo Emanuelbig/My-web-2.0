@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mí | Emanuel Morano Solé</title>
-    <meta name="theme-color" content="#0056FF">
-    
+    <title>About me | Emanuel Morano Solé</title>
+    <meta name="theme-color" content="#fffffffA">
+
+    <meta name="description" content="Emanuel Morano Solé. Diseñador de Producto con enfoque en Design Thinking, metodologías ágiles y diseño centrado en el usuario. Buenos Aires, Argentina.">
+    <link rel="canonical" href="https://emanuelmoranosole.com/">
+    <meta property="og:title" content="Sobre Emanuel Morano Solé | Quien soy y cómo trabajo">
+    <meta property="og:description" content="Diseñador de Producto.">
+    <meta property="og:image" content="https://emanuelmoranosole.com/assets/images/sobremi/3.jpg"> 
+    <meta property="og:url" content="https://emanuelmoranosole.com/assets/pages/about.html">
+    <meta property="og:type" content="profile">
+
     <link rel="icon" href="../images/favicon 16x16.ico" sizes="16x16" type="image/x-icon">
+    <link rel="icon" href="../images/favicon 32x32.ico" sizes="32x32" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600&family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
@@ -17,81 +26,103 @@
 
     <nav class="navbar">
         <div class="brand-signature">
-             <a href="../../index.html">
-                <img src="../svg/firma Emanuel Morano Sole.svg" alt="Emanuel Morano Solé"> 
-             </a>
+            <a href="../../index.html"><span class="nav-item">EMANUEL MORANO SOLÉ</span><br></a>
         </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
         <div class="nav-links" id="navLinks">
-            <a href="../../index.html" class="nav-item">INICIO</a> 
-            <a href="./destacados.html" class="nav-item">DESTACADOS</a> 
-            <button class="lang-btn" id="lang-toggle">EN</button>
+            <a href="../../index.html" class="nav-item" id="nav-home">INICIO</a> 
+            <a href="./destacados.html" class="nav-item" id="nav-destacados">DESTACADOS</a> 
+            <button class="lang-btn" id="lang-toggle" onclick="toggleLanguage()">EN</button>
         </div>
     </nav>
 
-    <header class="hero about-hero">
+    <header class="hero about-hero" data-aos="fade-down" style="padding: 100px 4% 4rem 4%;">
         <div class="hero-split">
-            <div class="hero-image-container" data-aos="fade-right">
-                <img src="../images/product-designer.png" alt="Emanuel Morano Solé" class="profile-img">
+            <div class="hero-image-container">
+                <img src="../images/sobremi/3.jpg" alt="Emanuel Morano Solé" class="profile-img">
             </div>
             
-            <div class="hero-content-about" data-aos="fade-left">
-                <h1 style="font-size: clamp(2.5rem, 5vw, 4.5rem);">
-                    <span class="gradient-text">Diseño con</span><br>
+            <div class="hero-content-about">
+                <h1 id="about-title" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">
+                    <span class="gradient-text">Innovación con</span><br>
                     <span class="highlight">Propósito.</span>
                 </h1>
                 <div class="hero-sub">
-                    <p>Soy Emanuel, un Product Designer (UX/UI) basado en Buenos Aires. Mi enfoque une el rigor del diseño industrial con la agilidad digital para crear soluciones que no solo se ven bien, sino que funcionan para las personas.</p>
+                    <p id="about-desc">Soy Emanuel, un Diseñador de Producto que vive en Buenos Aires. Actúo como un mediador, no solo entre la función, la estética y la experiencia de usuario, sino también entre los distintos equipos de trabajo. Traduzco necesidades en soluciones claras para crear productos que aporten valor tanto a las personas como al negocio.</p>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="container about-details">
+    <section class="container about-details" style="padding: 0 4%; max-width: 1400px; margin: 0 auto;">
         <div class="bento-grid-about">
-            <div class="bento-item" data-aos="fade-up">
-                <span class="label-cat">Ubicación</span>
-                <p class="p-title">CABA, Argentina</p>
+            
+            <div class="bento-item" data-aos="fade-up" data-aos-delay="200">
+                <span class="label-cat" id="lbl-interests">Intereses</span>
+                <p class="p-title" id="val-interests">Desarrollo de Productos y Servicios</p>
             </div>
             <div class="bento-item" data-aos="fade-up" data-aos-delay="100">
-                <span class="label-cat">Lifestyle</span>
-                <p class="p-title">Vegetariano & Fitness</p>
+                <span class="label-cat" id="lbl-focus">Foco</span>
+                <p class="p-title" id="val-focus">Diseño End to End</p>
             </div>
-            <div class="bento-item" data-aos="fade-up" data-aos-delay="200">
-                <span class="label-cat">Intereses</span>
-                <p class="p-title">Socio-política & Historia</p>
+            <div class="bento-item" data-aos="fade-up">
+                <span class="label-cat" id="lbl-location">Ubicación</span>
+                <p class="p-title" id="val-location">CABA, Argentina</p>
             </div>
         </div>
 
         <div class="process-box" data-aos="zoom-in">
-            <span class="label-cat" style="color: white; border-color: white;">Mi Enfoque de Producto</span>
+            <span class="label-cat" style="color: white; border-color: white;" id="lbl-methodologies">Mis Metodologías</span>
             <div class="process-steps">
                 <div class="step-item">
-                    <h3>01. Empatía</h3>
-                    <p>Entender al usuario y el negocio antes de mover un píxel.</p>
+                    <h3>Design Thinking</h3>
+                    <p id="desc-dt">Investigo y empatizo profundamente para entender la raíz del problema antes de proponer cualquier solución visual.</p>
                 </div>
                 <div class="step-item">
-                    <h3>02. Estructura</h3>
-                    <p>Arquitectura de información y flujos que eliminan la fricción.</p>
+                    <h3>Human-Centered Design</h3>
+                    <p id="desc-hcd">Pongo a las personas en el centro de la ecuación. Mi prioridad es validar que el producto resuelva necesidades reales del usuario, minimizando la fricción.</p>
                 </div>
                 <div class="step-item">
-                    <h3>03. Estética</h3>
-                    <p>Interfaces de alta fidelidad y sistemas de diseño escalables.</p>
+                    <h3>Design Sprint</h3>
+                    <p id="desc-ds"> Rapidez estratégica. Facilito la validación de ideas en etapas tempranas mediante prototipado rápido y testeo, reduciendo el riesgo de invertir en el camino equivocado.</p>
+                </div>
+                                <div class="step-item">
+                    <h3>Lean UX & Agile</h3>
+                    <p id="desc-lean">Diseño iterativo y eficiente. Me integro en flujos de trabajo ágiles, priorizando la entrega de valor constante y la colaboración fluida con equipos de desarrollo.</p>
+                </div>
+                <div class="step-item">
+                    <h3 id="title-req">Diseño basado en Requisitos</h3>
+                    <p id="desc-req">Traduzco objetivos de negocio y limitaciones técnicas en especificaciones claras, asegurando que el producto sea viable, factible y deseable.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <a href="https://wa.me/5491133168094" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+
+
     <footer>
-        <div class="footer-content">
-            <div class="cta-container">
+        <div class="footer-content" style="justify-content: center; text-align: center; padding-right: 0;">
+            <div class="cta-container" style="text-align: center; width: 100%;">
                 <h2 id="footer-title">¿Hablamos de diseño?</h2>
                 <a href="mailto:emanueljmoranosole@gmail.com" class="email-link">emanueljmoranosole@gmail.com</a>
             </div>
-            <img src="../svg/firma Emanuel Morano Sole.svg" alt="Firma" style="max-width: 150px; opacity: 0.6; filter: grayscale(1);">
+            <!-- <img src="../svg/firma Emanuel Morano Sole.svg" alt="Firma" style="max-width: 150px; opacity: 0.6; filter: grayscale(1);"> -->
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script/main.js"></script>
     <script>AOS.init({duration: 1000, once: true});</script>
 </body>
 </html>

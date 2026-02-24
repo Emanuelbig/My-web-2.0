@@ -4,14 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emanuel Morano Solé | Product Designer</title>
-    <meta name="theme-color" content="#0056FF">
     
+    <meta name="theme-color" content="#fffffffA">
+    <meta name="author" content="Emanuel Morano Solé">
+    <meta name="keywords" content="Product Design, Diseño Industrial, UX/UI, Diseño UX, Argentina, Portfolio, Desarrollo de Producto, Figma, SolidWorks">
+    <link rel="canonical" href="https://emanuelmoranosole.com/">
+
     <link rel="icon" href="./assets/images/favicon 16x16.ico" sizes="16x16" type="image/x-icon">
     <link rel="icon" href="./assets/images/favicon 32x32.ico" sizes="32x32" type="image/x-icon">
 
-    <meta name="description" content="Emanuel Morano Solé - Product Designer. Unificando diseño industrial y digital.">
-    <meta property="og:title" content="Emanuel Morano Solé">
+    <meta property="og:image" content="https://emanuelmoranosole.com/assets/images/og-social-cover.jpg">
+    <meta property="og:image:alt" content="Portfolio Emanuel Morano Solé">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://emanuelmoranosole.com/">
+    <meta property="og:title" content="Emanuel Morano Solé - Product Designer">
+    <meta name="description" content="Emanuel Morano Solé - Product Designer.">
     <meta name="robots" content="index,follow">
+
+    <!-- Para X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Emanuel Morano Solé | Product Designer">
+    <meta name="twitter:description" content="Portfolio de Diseño de Producto.">
+    <meta name="twitter:image" content="https://emanuelmoranosole.com/assets/images/og-social-cover.jpg">
+
+    <!-- Lenguaje google Id -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Emanuel Morano Solé",
+      "jobTitle": "Product Designer",
+      "url": "https://emanuelmoranosole.com",
+      "image": "https://emanuelmoranosole.com/assets/images/sobremi/3.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/emanuel-morano-sol%C3%A9/",
+        "https://www.behance.net/theoptimistic"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidad de Buenos Aires"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "description": "Product Designer, mediator among function, aesthetics, and user experience"
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,13 +62,15 @@
 
     <link rel="stylesheet" href="./assets/css/style.css">
     
+    
 </head>
 <body>
 
     <nav class="navbar">
         <div class="brand-signature">
              <a href="index.html">
-                <img src="./assets/images/Emanuel Morano Sole_signature-02-01.png" alt="Emanuel Morano Solé"> 
+                <!-- <img src="./assets/images/Emanuel Morano Sole_signature-02-01.png" alt="Emanuel Morano Solé"> -->
+                 <span class="nav-item">EMANUEL MORANO SOLÉ</span><br>
              </a>
         </div>
         
@@ -38,48 +81,148 @@
         </div>
 
         <div class="nav-links" id="navLinks">
-            <a href="./assets/pages/destacados.html" class="nav-item">DESTACADOS</a> 
-            <a href="./assets/pages/about.html" class="nav-item">SOBRE MÍ</a>
+            <a href="./assets/pages/destacados.html" class="nav-item" id="nav-destacados">DESTACADOS</a> 
+            <a href="./assets/pages/about.html" class="nav-item" id="nav-about">SOBRE MÍ</a>
             <button class="lang-btn" id="lang-toggle" onclick="toggleLanguage()">EN</button>
         </div>
     </nav>
 
     <header class="hero">
-        <h1 data-aos="fade-up">
+        <h1 data-aos="fade-up" id="hero-title">
             <span class="gradient-text">Diseño,</span><br>
             <span class="highlight">Desarrollo</span><br>
             <span class="gradient-text">& Gestiono.</span>
         </h1>
         <div class="hero-sub" data-aos="fade-up" data-aos-delay="200">
-            <p id="pitch-text">Unificando el diseño industrial tangible con la experiencia digital intangible. Creando productos completos.</p>
+            <p id="pitch-text">Diseñador de Producto End-to-End con enfoque en la creación de soluciones integrales durante todo su ciclo de vida.</p>
         </div>
     </header>
 
     <section class="work-section">
         <div class="masonry-grid">
             
-            <a href="LINK_BEHANCE_PROYECTO_PRINCIPAL" target="_blank" class="grid-item big" data-aos="fade-in">
-                <img src="https://via.placeholder.com/1200" alt="Proyecto Principal">
+            <a href="https://www.behance.net/gallery/194691463/NETVIBE-The-Best-Place-To-Do-Networking-Event" target="_blank" class="grid-item big" data-aos="fade-in">
+                <img src="./assets/images/proyects/netvibe_cover.jpg" alt="Proyecto Principal">
                 <div class="item-overlay">VER PROYECTO</div>
             </a>
 
-            <a href="LINK_BEHANCE_PROYECTO_2" target="_blank" class="grid-item tall" data-aos="fade-in">
-                <img src="https://via.placeholder.com/600x1200" alt="Proyecto Vertical">
+            <a href="https://www.behance.net/gallery/204028273/Masterpack-Ferrazzi" target="_blank" class="grid-item tall" data-aos="fade-in">
+                <img src="./assets/images/proyects/ferrazzimasterpack_cover.png" alt="Proyecto Vertical">
                 <div class="item-overlay">VER PROYECTO</div>
             </a>
 
-            <a href="LINK_BEHANCE_PROYECTO_3" target="_blank" class="grid-item wide" data-aos="fade-in">
-                <img src="https://via.placeholder.com/1200x600" alt="Proyecto Horizontal">
+            <a href="https://www.behance.net/gallery/217791515/Nautilus-Product-Design-3D-Visualization" target="_blank" class="grid-item wide" data-aos="fade-in">
+                <img src="./assets/images/proyects/nautilus_cover.png" alt="Proyecto Horizontal">
                 <div class="item-overlay">VER PROYECTO</div>
             </a>
 
-            <a href="LINK_BEHANCE_PROYECTO_4" target="_blank" class="grid-item" data-aos="fade-in">
-                <img src="https://via.placeholder.com/600" alt="Proyecto 4">
+            <a href="https://www.behance.net/gallery/163081549/UX-Integracion-del-Monopatin-al-Ecosistema-Urbano" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/Seeker_cover.png" alt="Proyecto 4">
                 <div class="item-overlay">VER PROYECTO</div>
             </a>
 
-             <a href="LINK_BEHANCE_PROYECTO_5" target="_blank" class="grid-item" data-aos="fade-in">
-                <img src="https://via.placeholder.com/600" alt="Proyecto 5">
+            <a href="https://www.behance.net/gallery/158453767/WORKI-UXUI-Servicios-del-Hogar" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/worki_cover.png" alt="Proyecto 5">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/164509113/Wireframes-MI-FI-UI-RebarMax" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/rebarmax_cover.png" alt="Proyecto 6">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/196161345/Competition-Ignition-Coil-BA370-Product-Design" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/ba370coil_cover.png" alt="Proyecto 7">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/231861071/UX-CHALLENGE-appa-APP" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/appa_cover.png" alt="Proyecto 8">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/209086981/Social-Media-for-Spark-Plug-and-Cable-Company" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/ferrazziinstagram_cover.png" alt="Proyecto 9">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/208536233/Scaffolding-Plank-SINIS" target="_blank" class="grid-item wide" data-aos="fade-in">
+                <img src="./assets/images/proyects/scaffoldingSinis_cover.jpg" alt="Proyecto 10">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/204300963/Concrete-Bucket-Design-for-SINIS" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/ConcreteBucket_cover.png" alt="Proyecto 11">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/207267627/Tripod-for-Slab-Prop-SINIS" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/Tripod_cover.png" alt="Proyecto 12">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+            
+            <a href="https://www.behance.net/gallery/195205951/Slab-Prop-Puntal-para-Losa" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/puntal_cover.jpg" alt="Proyecto 13">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/151308341/Mesa-de-corte-y-doblado-WORKBLE-SINIS" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/mesadetrabajo_cover.png" alt="Proyecto 14">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/151349799/ECOSER-Sistema-integral-basado-en-economia-circular" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/ecoser_cover.png" alt="Proyecto 15">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/74568257/CAMPUS-Tent-suspended-in-the-air" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/campus_cover.png" alt="Proyecto 16">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/217032635/Racing-Wires-and-Spark-Plugs-Banners" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/ferrazziposter_cover.png" alt="Proyecto 17">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/195273105/The-Perfect-Scaffolding-for-Interior-SINIS" target="_blank" class="grid-item tall" data-aos="fade-in">
+                <img src="./assets/images/proyects/Interiorscaffolding_cover.png" alt="Proyecto 18">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/74456349/Unipersonal-vehicle-with-a-drone-typology" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/drone_cover.png" alt="Proyecto 19">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/218261987/Modular-Sofa-GOLFITX-Product-Design" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/sofa_cover.png" alt="Proyecto 20">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/151304091/BLIDAG-Safety-bag" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/safebag_cover.png" alt="Proyecto 21">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/195007339/FLYER-DESIGN-Communication-of-New-Product-Label" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/flyerdesign_png.png" alt="Proyecto 22">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/216766989/2025-Calendar-Poster-Design-Automotive-Company" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/calendar2025_cover.png" alt="Proyecto 23">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+            
+            <a href="https://www.behance.net/gallery/76430317/Tentalix-The-creature-of-the-washing-machine" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/tentalix_cover.png" alt="Proyecto 24">
+                <div class="item-overlay">VER PROYECTO</div>
+            </a>
+
+            <a href="https://www.behance.net/gallery/151499701/Accesorios-FRAME-MIYAKE" target="_blank" class="grid-item" data-aos="fade-in">
+                <img src="./assets/images/proyects/miyakeaccesory_cover.png" alt="Proyecto 25">
                 <div class="item-overlay">VER PROYECTO</div>
             </a>
 
