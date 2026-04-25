@@ -100,6 +100,8 @@ const translations = {
         p12t: "Sofá Modular", p12d: "Diseño de sofá modular para Interiour Forma.",
         p13t: "Accesorios Frame Miyake", p13d: "Diseño de accesorios familia de producto Miyake.",
         p14t: "Drone Vehículo Unipersonal", p14d: "Diseño de drone vehículo unipersonal para evento.",
+        p15t: "Accesorios Frame Miyake", p15d: "Diseño de accesorios familia de producto Miyake.",
+        p16t: "Drone Vehículo Unipersonal", p16d: "Diseño y gestión de producto completo para motores industriales.",
 
         // PÁGINA DIGITAL
         digTitle: "Diseño Digital &<br>Sistemas UX/UI.",
@@ -112,6 +114,7 @@ const translations = {
         d5t: "Netvibe", d5d: "Página web para evento.",
         d6t: "Ecoser", d6d: "Aplicación de gestión de residuos para MacDonalds.",
         d7t: "Ferrazzi Social Media", d7d: "Contenido para redes sociales de @Ferrazzicompeticion.",
+        d8t: "Mercado Play", d8d: "Aplicación para mirar Pelis y Series, rediseño.",
         // FOOTER CREDITS
         copyright: "© 2026. Diseñado y Codificado por Emanuel Morano Solé."
     },
@@ -177,6 +180,9 @@ const translations = {
         p12t: "Modular Sofa", p12d: "Modular sofa design for Interiour Forma.",
         p13t: "Frame Miyake Accessories", p13d: "Design of accessories for the Miyake product family.",
         p14t: "Personal Drone Vehicle", p14d: "Personal drone vehicle design for airfield events.",
+        p15t: "Packaging family design", p15d: "High-End Design for Professional Ignition Coils / Product Management for Vehicles.",
+        p16t: "Industrial Cable", p16d: "End-to-end product design and management for industrial motors.",
+
 
         // DIGITAL PAGE
         digTitle: "Digital Design &<br>UX/UI Systems.",
@@ -189,6 +195,7 @@ const translations = {
         d5t: "Netvibe", d5d: "Event website.",
         d6t: "Ecoser", d6d: "Waste management application for McDonald's.",
         d7t: "Ferrazzi Social Media", d7d: "Social media content for @Ferrazzicompeticion.",
+        d8t: "Mercado Play", d8d: "App for watching movies and TV shows, redesigned.",
         // FOOTER CREDITS
         copyright: "© 2026. Designed & Coded by Emanuel Morano Solé."
     }
@@ -254,8 +261,8 @@ window.toggleLanguage = function() {
     const footerBack = document.getElementById('footer-back');
     if (footerBack) footerBack.textContent = t.backLink;
 
-    // 3. ACTUALIZAR LOS 14 PROYECTOS (Bucle automático)
-    for (let i = 1; i <= 14; i++) {
+    // 3. ACTUALIZAR LOS 16 PROYECTOS (Bucle automático)
+    for (let i = 1; i <= 16; i++) {
         // Busca el título (ej: p1-title)
         const pTitle = document.getElementById(`p${i}-title`);
         if (pTitle) pTitle.textContent = t[`p${i}t`];
@@ -269,8 +276,8 @@ window.toggleLanguage = function() {
     const digTitle = document.getElementById('dig-title');
     if (digTitle) digTitle.innerHTML = t.digTitle;
 
-    // Bucle para los 7 proyectos digitales
-    for (let i = 1; i <= 7; i++) {
+    // Bucle para los 8 proyectos digitales
+    for (let i = 1; i <= 8; i++) {
         const dTitle = document.getElementById(`d${i}-title`);
         if (dTitle) dTitle.textContent = t[`d${i}t`];
 
